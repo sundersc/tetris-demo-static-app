@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+  <script type="module" crossorigin src="/assets/index-DYlHDTyw.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DuKMolbs.css">
+</head>
+<body>
+  <div class="bg-animation">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <div id="mode-select" class="mode-select-overlay">
+    <h1 class="title">TETRIS</h1>
+    <div class="mode-buttons">
+      <button id="btn-classic" class="mode-btn">CLASSIC</button>
+      <button id="btn-modern" class="mode-btn">MODERN</button>
+    </div>
+    <div class="mode-descriptions">
+      <p class="mode-desc">Classic: No ghost, instant lock, pure random</p>
+      <p class="mode-desc">Modern: Ghost piece, lock delay, 7-bag system</p>
+    </div>
+  </div>
+
+  <div id="game-container">
+    <div class="title">TETRIS</div>
+
+    <div class="panel">
+      <canvas id="effects-canvas"></canvas>
+    </div>
+
+    <div class="panel game-area">
+      <canvas id="game-canvas"></canvas>
+      <div id="pause-overlay" class="overlay">
+        <h2>PAUSED</h2>
+        <p>Press P to resume</p>
+      </div>
+      <div id="game-over" class="overlay">
+        <h2>GAME OVER</h2>
+        <p>Press R to restart</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="score-panel">
+        <div class="stat-box">
+          <div class="stat-label">Score</div>
+          <div class="stat-value" id="score-value">0</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Level</div>
+          <div class="stat-value" id="level-value">1</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Lines</div>
+          <div class="stat-value" id="lines-value">0</div>
+        </div>
+        <div class="next-box">
+          <div class="stat-label">Next</div>
+          <canvas id="next-canvas" width="100" height="80"></canvas>
+        </div>
+        <div class="controls">
+          <span>←→</span> Move<br>
+          <span>↑/X</span> Rotate CW<br>
+          <span>Z</span> Rotate CCW<br>
+          <span>↓</span> Soft Drop<br>
+          <span>Space</span> Hard Drop<br>
+          <span>P</span> Pause<br>
+          <span>R</span> Restart
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
